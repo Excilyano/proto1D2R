@@ -13,11 +13,19 @@ public class TextManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sText = text;
+		sText.enabled = false;
 		sSprite = sprite;
+		sSprite.enabled = false;
 	}
 	
-	public static void UpdateText(string value) {
+	public static void Popin(string value) {
 		sText.text = value;
+		sText.enabled = true;
 		sSprite.enabled = true;
+	}
+
+	public static void Popoff() {
+		sText.enabled = false;
+		sSprite.enabled = false;
 	}
 }

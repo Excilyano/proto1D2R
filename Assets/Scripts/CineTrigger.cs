@@ -6,10 +6,10 @@ public class CineTrigger : MonoBehaviour {
 	public string message;
 
 	public void OnTriggerEnter(Collider coll) {
-		TextManagement.UpdateText(message);
+		TextManagement.Popin(message);
 	}
 
 	public void OnTriggerExit(Collider coll) {
-		TextManagement.UpdateText("");
+		TextManagement.Popoff();
 	}
 }
